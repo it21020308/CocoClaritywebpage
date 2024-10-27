@@ -1,0 +1,112 @@
+/* Documents.css */
+
+/* Main Container */
+.documents-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.documents-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.documents-container h3 {
+  font-size: 1.5rem;
+  color: #f58607;
+  margin-bottom: 5px;
+}
+
+.documents-container p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Grid Layout for Documents */
+.documents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Individual Document Card */
+.document-card {
+  width: 100%;
+  max-width: 300px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+/* Document Header Styling */
+.document-header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #eee;
+  background-color: #f58607;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+/* Change Header Background on Hover */
+.document-card:hover .document-header {
+  background-color: #1e90ff;
+}
+
+/* Document Header Icon Styling */
+.document-header i {
+  font-size: 2rem;
+}
+
+/* Document Header Title */
+.document-header h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Document Footer Styling */
+.document-footer {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Footer Text */
+.document-footer span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+}
+
+/* Footer Link */
+.document-footer a {
+  color: #f58607;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Link Hover Effect */
+.document-footer a:hover {
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .documents-grid {
+    grid-template-columns: 1fr;
+  }
+}

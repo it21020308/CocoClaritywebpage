@@ -1,0 +1,107 @@
+/* Main Container */
+.circular-process-container {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.circular-process-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+/* Grid Layout for Process Steps */
+.circular-process {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+/* Hexagon Style for Each Process Step */
+.process-step {
+  position: relative;
+  width: 180px;
+  height: 200px;
+  background-color: white;
+  clip-path: polygon(
+    50% 0%, 
+    100% 25%, 
+    100% 75%, 
+    50% 100%, 
+    0% 75%, 
+    0% 25%
+  );
+  border: 2px solid #f58607; /* Neon green border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.process-step:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background-color: #f0f4f3;
+}
+
+/* Image Inside Hexagon */
+.step-image {
+  width: 200px; /* Initial image size */
+  height: 200px;
+  transition: width 0.3s ease, height 0.3s ease; /* Smooth transition */
+}
+
+/* Hovered Image Size */
+.process-step:hover .step-image {
+  width: 50px; /* Enlarged image size on hover */
+  height: 50px;
+}
+
+/* Step Name */
+.process-step h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 5px 0;
+  color: #333;
+}
+
+/* Step Description */
+.process-step p {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .circular-process {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .process-step {
+    width: 150px;
+    height: 170px;
+  }
+
+  .step-image {
+    width: 35px; /* Smaller initial image size for mobile */
+    height: 35px;
+  }
+
+  .process-step:hover .step-image {
+    width: 50px; /* Larger size on hover for mobile */
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .circular-process {
+    grid-template-columns: 1fr;
+  }
+}

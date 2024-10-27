@@ -1,0 +1,103 @@
+/* Team.css */
+
+/* Container for the Team Section */
+.team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.team-container h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+/* Grid Layout */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns in the first row */
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Custom Styling for Second Row (4 cards) */
+.team-grid .team-card:nth-child(n+4) {
+  grid-column: span 1; /* Allow for the second row to have 4 cards */
+}
+
+/* Individual Team Card */
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  max-width: 250px;
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Circular Images */
+.team-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Circular images */
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Team Member Name */
+.team-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* Team Member Title */
+.team-title {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* Team Links */
+.team-links a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.team-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr; /* Single column on very small screens */
+  }
+
+  .team-image {
+    width: 120px;
+    height: 120px;
+  }
+}
+

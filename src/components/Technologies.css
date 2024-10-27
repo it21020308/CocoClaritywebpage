@@ -1,0 +1,73 @@
+/* Technologies.css */
+
+/* Container for the Technologies section */
+.technologies-section {
+  background-color: #000; /* Dark background */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Title Styling */
+.technologies-section h2 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Grid Layout */
+.technologies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Technology Items */
+.technology-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.technology-item:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Technology Logos */
+.tech-logo {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Technology Names */
+.technology-item p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .technologies-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    gap: 20px;
+  }
+
+  .tech-logo {
+    height: 80px;
+    width: 80px;
+  }
+
+  .technology-item p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,72 @@
+/* ProjectDetails.css */
+
+/* Container for the details section */
+.details-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Individual Card Styling */
+  .detail-card {
+    background: linear-gradient(135deg, #ffffff, #f1f1f1);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  
+  /* Card Title */
+  .detail-card h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2f3542;
+    margin-bottom: 10px;
+  }
+  
+  /* Card Description */
+  .detail-card p {
+    font-size: 1.1rem;
+    color: #707263;
+    line-height: 1.7;
+    margin-bottom: 15px;
+  }
+  
+  /* Hover Effect */
+  .detail-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #ffffff, #eee1d0);
+  }
+  
+  /* Animation for hover scaling */
+  .detail-card:hover h3 {
+    color: #f58607;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .details-container {
+      grid-template-columns: 1fr 1fr; /* 2 columns on medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .details-container {
+      grid-template-columns: 1fr; /* Single column on small screens */
+    }
+    .detail-card {
+      margin-bottom: 20px;
+    }
+  }
+  

@@ -1,0 +1,56 @@
+/* Overview.css */
+
+.overview-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .overview-text {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .overview-text h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+  }
+  
+  .overview-text p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .overview-image img {
+    width: 400px;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .overview-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .overview-text {
+      margin-right: 0;
+    }
+  
+    .overview-image img {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  

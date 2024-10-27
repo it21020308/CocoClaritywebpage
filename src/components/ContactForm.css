@@ -1,0 +1,118 @@
+/* ContactForm.css */
+
+/* Main Container Styling */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Section Form Styling */
+.contact-left {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 20px;
+}
+
+.contact-left h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.contact-left h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #f58607;
+}
+
+.contact-left form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Form Input Styling */
+.contact-left input,
+.contact-left textarea {
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-left input:focus,
+.contact-left textarea:focus {
+  border-color: #f58607;
+}
+
+/* Submit Button Styling */
+.contact-left button {
+  padding: 15px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #f58607;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-left button:hover {
+  background-color: #f58607;
+}
+
+/* Right Section Styling */
+.contact-right {
+  flex: 0.5;
+  min-width: 250px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-right h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-right p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.contact-right a {
+  color: #f58607;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-right a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-left,
+  .contact-right {
+    margin: 0;
+    padding: 20px 0;
+  }
+}

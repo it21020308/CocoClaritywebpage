@@ -1,0 +1,60 @@
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align logo to left and menu to right */
+    background-color: #000; /* Black background */
+    padding: 10px 40px;
+}
+
+.navbar-logo {
+    height: 100px;
+    cursor: pointer;
+}
+
+.navbar-menu {
+    background: none;
+    border: none;
+    flex: 1;
+    justify-content: flex-end; /* Push menu items to the right */
+}
+
+.p-menubar-root-list {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px; /* Space between menu items */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.p-menuitem-link {
+    color: #fff; /* White text */
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s;
+}
+
+.p-menuitem-link:hover {
+    color: #0dcaf0; /* Light blue on hover */
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-menu {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .p-menubar-root-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
